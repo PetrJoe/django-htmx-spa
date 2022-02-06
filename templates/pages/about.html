@@ -1,0 +1,13 @@
+<div hx-target= "#app">
+	<div class= "content text-center mt-4">
+		<h1 class="text-dark" style="font-size:50px;"> Django Htmx SPA </h1> 
+		<p class="text-dark"> Keep track of what needs to be done! </p>
+	</div>
+	<div class="text-center"> <!-- text-right = text-align: right -->
+		<a href="#" class="btn">Read more</a>
+	</div>
+</div>
+
+{% for todo in todos %}
+{{ todo.title }}
+{% endfor %}

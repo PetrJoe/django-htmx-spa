@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="d-flex align-items-center justify-content-center mt-20">
+  <div class= "content text-center">  
+    <div class="content mt-20 text-center">
+    <h2> Sign Up</h2>
+    <form 
+      hx-post="{% url 'account_signup' %}"
+      hx-target= "#app"
+    >
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" 
+      class='btn mt-5'> Sign Up </button>
+    </form>
+    <span  
+        hx-get="{% url 'account_login' %}" 
+        hx-target="#app"
+        hx-trigger="click"
+        class= "hyperlink-underline"
+        hx-push-url="/login/"
+        >
+        Sign in
+    </span>.
+
+    </div>     
+  </div>
+</div>
+
+
+{% endblock %}
+
