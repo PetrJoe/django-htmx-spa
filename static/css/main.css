@@ -1,0 +1,26 @@
+#id_username, #id_email,  #id_password1,  #id_password2,#id_login, #id_password {
+  width: 250px;
+  height: 30px;
+  border-radius: 6px;
+}
+label{
+  display: none;
+}
+input{
+  overflow: visible;
+
+  display: block;
+  padding-left: var(--input-horizontal-padding);
+  padding-right: var(--input-horizontal-padding);
+  color: var(--lm-input-text-color);
+  background-color: var(--lm-input-bg-color);
+  border: var(--input-border-width) solid var(--lm-input-border-color);
+  box-shadow: var(--lm-input-box-shadow);
+  appearance: none;
+}
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}

@@ -6,7 +6,10 @@
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
   <meta name="viewport" content="width=device-width" />
   <title>HTMX/Django To DO SPA </title>
-  <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css" rel="stylesheet" />
+  <link href="/static/css/halfmoon-variables.min.css" rel="stylesheet" />
+  <link href="/static/css/main.css" rel="stylesheet" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/css/halfmoon-variables.min.css" rel="stylesheet" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
   <style>
     .hyperlink-underline {
       cursor: pointer;
@@ -16,9 +19,9 @@
 </head>
 
 <body>
-
+  {% include 'components/navbar.html' %}
   <div class="page-wrapper">
-    <div class="content-wrapper">
+    <div class="content-wrapper" id="app">
         {% block content %} {% endblock content %}
     </div>
 
@@ -28,7 +31,9 @@
       e.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
     })
   </script>
-  <script src="https://unpkg.com/htmx.org@1.1.0"></script> 
-  <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script>
+  <!-- <script src="https://unpkg.com/htmx.org@1.1.0"></script>  -->
+  <script src="/static/js/htmx.min.js"></script> 
+  <!-- <script src="https://cdn.jsdelivr.net/npm/halfmoon@1.1.1/js/halfmoon.min.js"></script> -->
+  <script src="/static/js/halfmoon.min.js"></script>
 </body>
 </html>
