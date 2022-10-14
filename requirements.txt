@@ -28,7 +28,7 @@ jeepney==0.7.1
 Jinja2==3.1.2
 keyring==21.8.0
 lockfile==0.12.2
-mysqlclient==2.1.1
+# mysqlclient==2.1.1
 MarkupSafe==2.1.1
 msgpack==1.0.2
 numpy 
